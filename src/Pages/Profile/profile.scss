@@ -1,0 +1,205 @@
+@import "../../style.scss";
+
+.profile {
+  @include themify($themes) {
+    .profileContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: themed("bg");
+
+      hr {
+        width: 75%;
+        margin: 20px 0px;
+        margin-bottom: 5px;
+        border: none;
+        background-color: themed("border");
+        height: 1px;
+        left: 10px;
+      }
+
+      .options {
+        width: 75%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5px;
+
+        .left {
+          display: flex;
+          align-items: center;
+          gap: 0px;
+          margin-left: 20px;
+
+          button{
+            font-weight: 500;
+            color: themed("textColorsoft");
+            font-size: 18px;
+            padding: 15px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: themed("bg");
+            cursor: pointer;
+
+            &:hover{
+              background-color: themed("bgsoft");
+              //border-color: themed("border");
+            }
+
+            &:visited {
+              border-bottom-color: themed("logo");
+              color: themed("logo");
+            }
+          }
+        }
+
+        .right {
+          display: flex;
+          align-items: center;
+          padding: 6px 15px;
+          background-color: themed("bgsoft");
+          border-radius: 5px;
+          border: none;
+          color: themed("textColor");
+        }
+      }
+
+      .images {
+        width: 80%;
+        height: 500px;
+        position: relative;
+
+        .coverImg {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+        }
+
+        .coverEdit {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 170px;
+          height: 35px;
+          position: absolute;
+          gap: 10px;
+          top: 445px;
+          right: 40px;
+          border-radius: 5px;
+          border: none;
+          padding: 10px;
+          background-color: rgb(255, 253, 253);
+          cursor: pointer;
+
+          .icon {
+          }
+
+          span {
+            font-weight: bold;
+          }
+        }
+
+        .profilePic {
+          width: 180px;
+          height: 180px;
+          border-radius: 50%;
+          position: absolute;
+          left: 50px;
+          top: 470px;
+          border: 5px solid white;
+        }
+
+        .profileEdit {
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: none;
+          position: absolute;
+          top: 600px;
+          left: 190px;
+          background-color: rgb(239, 238, 238);
+          cursor: pointer;
+        }
+      }
+
+      .userInfo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        height: 150px;
+        padding: 5px 0px;
+        position: relative;
+
+        .left {
+          display: flex;
+          flex-direction: column;
+          left: 250px;
+          position: absolute;
+          gap: 10px;
+
+          .name {
+            font-weight: bold;
+            font-size: 28px;
+            color: themed("textColor");
+          }
+
+          .friends {
+            font-weight: 500;
+            color: themed("textColorsoft");
+            font-size: 18px;
+          }
+
+          .social {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+
+            a {
+              color: themed("logo");
+            }
+          }
+        }
+
+        .right {
+          position: absolute;
+          right: 40px;
+          bottom: 15px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+            gap: 8px;
+            border-radius: 5px;
+            border: none;
+            padding: 10px;
+            width: 140px;
+            height: 35px;
+            cursor: pointer;
+
+            &:first-child {
+              background-color: #5271ff;
+              color: white;
+            }
+
+            &:last-child {
+              background-color: rgb(214, 213, 213);
+              color: black;
+            }
+          }
+        }
+      }
+    }
+  }
+}

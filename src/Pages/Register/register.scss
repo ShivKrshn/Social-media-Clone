@@ -1,0 +1,93 @@
+.register{
+    height: 100vh;
+    background-color: rgba(193,190,255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+        .card{
+            display: flex;
+            flex-direction: row-reverse;
+            min-height: 400px;
+            max-height: 500px;
+            background-color: white;
+            width: 50%;
+            border-radius: 10px;
+            overflow: hidden;
+    
+            .left{
+                flex: 1;
+                background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)), url("https://images.pexels.com/photos/3314294/pexels-photo-3314294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center;
+                background-size: cover;
+                padding: 50px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                color: white;
+                margin: 0;
+                justify-content: center;
+    
+                h1{
+                    font-size: 70px;
+                    line-height: 70px;
+                    margin: 0;
+                }
+    
+                p{ margin: 0;}
+    
+                span{
+                    font-size: 12px;
+                    margin: 0;
+                }
+    
+                button{
+                    width: 50%;
+                    background-color: white;
+                    color: rebeccapurple;
+                    border: none;
+                    padding: 10px;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+    
+            .right{
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding: 50px;
+                gap: 25px;
+    
+                h1{
+                    display: flex;
+                    margin: 0;
+                    color:#555;
+                    font-size: 24px;
+                }
+    
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                    margin: 0;
+    
+                    input{
+                        border: none;
+                        border-bottom: 1px solid lightgrey;
+                        padding: 15px 10px;
+                    }
+    
+                    button{
+                        width: 50%;
+                    background-color: rebeccapurple;
+                    color: white;
+                    border: none;
+                    padding: 10px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    }
+                }
+            }
+        }
+    }

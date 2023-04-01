@@ -1,0 +1,74 @@
+@import "../../style.scss";
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+  @include themify($themes) {
+    .dropdown-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      color: themed("textColorsoft");
+      border-radius: 5px;
+      border: none;
+      background-color: themed("bg");
+      cursor: pointer;
+
+      &:hover {
+        background-color: themed("bgsoft");
+        //border-color: themed("border");
+      }
+
+      &:visited {
+        border-bottom-color: themed("logo");
+        color: themed("logo");
+      }
+
+      p {
+      }
+
+      .more {
+      }
+    }
+
+    .dropdown-menu {
+      display: none;
+    }
+    .dropdown-menu-show {
+      position: absolute;
+      top: 80%;
+      left: 0;
+      z-index: 1;
+      display: block;
+      min-width: 230px;
+      max-height: 250px;
+      gap: 10px;
+      overflow: auto;
+      padding: 10px 10px;
+      border: 1px solid themed("border");
+      background-color: themed("bg");
+      border-radius: 10px;
+      -webkit-box-shadow: 0px 0px 0px 0px rgba(153, 148, 153, 1);
+      -moz-box-shadow: 0px 0px 0px 0px rgba(153, 148, 153, 1);
+      box-shadow: 0px 0px 0px 0px rgba(153, 148, 153, 1);
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      li {
+        display: block;
+        text-decoration: none;
+        padding: 10px;
+        color: themed("textColor");
+        background-color: themed("bg");
+
+        &:hover {
+          background-color: themed("bgsoft");
+          border-radius: 5px;
+          //border-color: themed("border");
+        }
+      }
+    }
+  }
+}

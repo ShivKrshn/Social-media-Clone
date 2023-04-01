@@ -1,0 +1,41 @@
+$themes: (
+    light: (
+        textColor: black,
+        bg: white,
+        logo: #5271ff,
+        textColorsoft: #555,
+        bgsoft: #f6f3f3,
+        border: lightgray,
+    ),
+    dark: (
+        textColor: whitesmoke,
+        bg: #222,
+        logo: white,
+        textColorsoft: lightgray,
+        bgsoft: #333,
+        border: #444,
+    ),
+);
+
+
+@mixin themify($themes) {
+    @each $theme, $map in $themes {
+        .theme-#{$theme} & {
+            $theme-map: () !global;
+            @each $key, $submap in $map {
+                $value: map-get(map-get($themes, $theme), "#{$key}");
+                $theme-map: map-merge(
+                    $theme-map,
+                    (
+                        $key: $value,
+                    )
+                ) !global;
+            }
+            @content;
+            $theme-map: null !global;
+        }
+    }
+}
+@function themed($key) {
+    @return map-get($theme-map, $key);
+}

@@ -1,0 +1,92 @@
+.login{
+height: 100vh;
+background-color: rgba(193,190,255);
+display: flex;
+align-items: center;
+justify-content: center;
+
+    .card{
+        display: flex;
+        min-height: 500px;
+        max-height: 600px;
+        background-color: white;
+        width: 50%;
+        border-radius: 10px;
+        overflow: hidden;
+
+        .left{
+            flex: 1;
+            background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)), url("https://images.pexels.com/photos/609771/pexels-photo-609771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1") center;
+            background-size: cover;
+            padding: 45px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 30px;
+            color: white;
+            margin: 0;
+
+            h1{
+                font-size: 90px;
+                line-height: 90px;
+                margin: 0;
+            }
+
+            p{ margin: 0;}
+
+            span{
+                font-size: 12px;
+                margin: 0;
+            }
+
+            button{
+                width: 50%;
+                background-color: white;
+                color: rebeccapurple;
+                border: none;
+                padding: 10px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+
+        .right{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 50px;
+            gap: 30px;
+
+            h1{
+                display: flex;
+                margin: 0;
+                color:#555;
+                font-size: 24px;
+            }
+
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 18px;
+                margin: 0;
+
+                input{
+                    border: none;
+                    border-bottom: 1px solid lightgrey;
+                    padding: 20px 10px;
+                }
+
+                button{
+                    width: 50%;
+                background-color: rebeccapurple;
+                color: white;
+                border: none;
+                padding: 10px;
+                font-weight: bold;
+                cursor: pointer;
+                }
+            }
+        }
+    }
+}
