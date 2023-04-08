@@ -14,7 +14,7 @@ const Login = () => {
     <div className="login">
       <div className="card">
         <div className="left">
-          <h1>Hello World.</h1>
+          <h1>Hello World. Welcome</h1>
           <p>
             If you are always trying to be normal, you will never know how
             amazing you can be.
