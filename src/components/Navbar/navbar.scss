@@ -1,8 +1,7 @@
 @import "../../style.scss";
 
-.navbar{
-    @include themify($themes) {
-
+.navbar {
+  @include themify($themes) {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -15,63 +14,80 @@
     color: themed("textColor");
     z-index: 999;
 
-    .left{
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      .logo {
+        font-weight: bold;
+        color: themed("logo");
+      }
+
+      .home {
         display: flex;
         align-items: center;
         gap: 30px;
+        color: themed("textColor");
+        background-color: themed("bg");
+        padding: 20px 0px;
+      }
 
-        .logo{
-            font-weight: bold;
-            color: themed("logo");
+      .search {
+        display: flex;
+        align-items: center;
+        border: 1px solid themed("border");
+        border-radius: 5px;
+        gap: 10px;
+
+        input {
+          border: none;
+          width: 500px;
+          background-color: transparent;
+          color: themed("textColor");
+
+          @include mobile {
+            display: none;
+          }
         }
-
-        .home{
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            color: themed("textColor");
-            background-color: themed("bg");  
-            padding:20px 0px;
-        }
-
-        .search{
-            display: flex;
-            align-items: center;
-            border: 1px solid themed("border");
-            border-radius: 5px;
-            gap: 10px;
-
-            input{
-                border: none;
-                width: 500px;
-                background-color: transparent;
-                color: themed("textColor");
-            }
-        }
+      }
     }
 
-    .right{
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .icons {
         display: flex;
         align-items: center;
         gap: 20px;
 
-        .user{
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-
-            img{
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-                object-fit: cover;
-            }
-
-            span{
-                font-size: 16px;
-            }
+        @include mobile {
+          display: none;
         }
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        span {
+          font-size: 16px;
+
+          @include mobile {
+            display: none;
+          }
+        }
+      }
     }
-}
+  }
 }

@@ -5,7 +5,7 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import GridViewOutlinedIcon from "@mui/icons-material/GridViewOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
-import ForumOutlinedIcon from '@mui/icons-material/ForumOutlined';
+import ForumOutlinedIcon from "@mui/icons-material/ForumOutlined";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import { useContext } from "react";
@@ -39,9 +39,11 @@ const Navbar = () => {
         </div>
       </div>
       <div className="right">
-        <ForumOutlinedIcon fontSize="small" />
-        <EmailOutlinedIcon fontSize="small" />
-        <NotificationsNoneOutlinedIcon fontSize="small" />
+        <div className="icons">
+          <ForumOutlinedIcon fontSize="small" />
+          <EmailOutlinedIcon fontSize="small" />
+          <NotificationsNoneOutlinedIcon fontSize="small" />
+        </div>
         <div className="user">
           <Link
             to={`/Profile/${currentUser.id}`}

@@ -5,7 +5,7 @@ import { AuthContext } from "../../context/AuthContext";
 const Comments = () => {
   const { currentUser } = useContext(AuthContext);
 
-  const comments = [
+  let comments = [
     {
       id: 3,
       name: "Sai Thilak",
@@ -28,13 +28,13 @@ const Comments = () => {
 
   return (
     <div className="comments">
-      <div className="write">
+      <form>
         <img src={currentUser.profilePic} alt="" />
         <input type="text" placeholder="write a comment" />
-        <button>submit</button>
-      </div>
+        <button type="submit">submit</button>
+      </form>
       {comments.map((comment) => (
-        <div className="comment">
+        <div className="comment" key={comment.id}>
           <img src={comment.profilePic} alt="" />
           <div className="info">
             <span>{comment.name}</span>

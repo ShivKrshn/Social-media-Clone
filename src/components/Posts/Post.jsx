@@ -9,8 +9,12 @@ import Comments from "../Comments/Comments";
 import { useState } from "react";
 
 const Post = ({ post }) => {
-  const liked = false;
+  const [isLiked, setIsLiked] = useState(false);
   const [commentOpen, setCommentOpen] = useState(false);
+
+  const likeHandler = () => {
+    setIsLiked(!isLiked);
+  };
 
   const commentHandler = () => {
     setCommentOpen(!commentOpen);
@@ -39,11 +43,11 @@ const Post = ({ post }) => {
           <img src={post.img} alt="" />
         </div>
         <div className="info">
-          <div className="item">
-            {liked ? (
-              <FavoriteOutlinedIcon fontSize="small" color="primary"/>
+          <div className="item" >
+            {isLiked ? (
+              <FavoriteOutlinedIcon fontSize="small" color="primary" onClick={likeHandler}/>
             ) : (
-              <FavoriteBorderOutlinedIcon fontSize="small" />
+              <FavoriteBorderOutlinedIcon fontSize="small" onClick={likeHandler}/>
             )}
             12 Likes
           </div>

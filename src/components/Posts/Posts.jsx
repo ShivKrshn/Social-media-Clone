@@ -32,13 +32,15 @@ const Posts = () => {
     },
   ];
 
-  return (<div className="posts">
-    {posts.map(post => (
-        <div className="post">
-            <Post post={post} key={post.id}/>
+  return (
+    <div className="posts">
+      {posts.map((post) => (
+        <div className="post" key={post.id}>
+          <Post post={post} />
         </div>
-    ))}
-  </div>);
+      ))}
+    </div>
+  );
 };
 
 export default Posts;

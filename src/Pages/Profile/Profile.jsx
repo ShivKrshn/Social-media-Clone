@@ -25,9 +25,9 @@ const Profile = () => {
             className="coverImg"
           />
           <button className="coverEdit">
-            <span className="icon">
+            <div className="icon">
               <AddAPhotoIcon fontSize="small" />
-            </span>
+            </div>
             <span>Edit Cover Photo</span>
           </button>
           <img
